@@ -1,0 +1,16 @@
+name: C++ CI
+
+on: [push]
+
+jobs:
+  build-ubuntu:
+
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: run cmake
+      run: mkdir build && && mkdir build/gcc cd build/gcc && cmake ../..
+    - name: build
+      run: cmake --build build/gcc
+    - name: test
+      run: cd build/gcc && ./unit_test
