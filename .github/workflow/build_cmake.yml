@@ -8,9 +8,11 @@ jobs:
     runs-on: ubuntu-latest
     
     steps:
+    - name: checkout
+      uses: actions/checkout@v2
     - name: run cmake
-      run: mkdir build && && mkdir build/gcc cd build/gcc && cmake ../..
+      run: mkdir build cd build && cmake ..
     - name: build
-      run: cmake --build build/gcc
+      run: cmake --build build
     - name: test
-      run: cd build/gcc && ./unit_test
+      run: cd build && ./unit_test
