@@ -18,6 +18,6 @@ jobs:
     - name: ls PWD
       run: ls
     - name: build 
-      run: cmake --build . && ls
+      run: cd build && ls && cmake --build . && ls
     - name: test
       run: cd build && ./unit_test
