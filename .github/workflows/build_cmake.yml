@@ -16,7 +16,7 @@ jobs:
     - name: run cmake
       run: mkdir build && cd build && cmake -DCMAKE_CXX_COMPILER='gcc-8' -DCMAKE_BUILD_TYPE=Debug ..
     - name: ls PWD
-      run: ls && $PWD
+      run: ls
     - name: build 
       run: cmake --build . && ls
     - name: test
