@@ -40,3 +40,10 @@ GMock::GMock
 GTest::Main
 GMock::Main
 )
+
+target_link_options(
+unit_test
+PRIVATE 
+-lrt
+
+)
