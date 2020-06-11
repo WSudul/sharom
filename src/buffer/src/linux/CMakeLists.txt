@@ -21,9 +21,7 @@ Sharom::Util
 )
 
 
-add_link_options()
 target_link_options(${PROJECT_NAME} 
-PUBLIC -lrt
-PRIVATE 
+INTERFACE -lrt 
 )
 
