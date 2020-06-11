@@ -15,9 +15,7 @@ jobs:
       uses: actions/checkout@v2
     - name: run cmake
       run: mkdir build && cd build && cmake -DCMAKE_CXX_COMPILER='gcc-8' -DCMAKE_BUILD_TYPE=Debug ..
-    - name: ls PWD
-      run: ls
     - name: build 
-      run: cd build && ls && cmake --build . && ls
+      run: ls && cmake --build build
     - name: test
       run: cd build && ./unit_test
